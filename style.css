@@ -1,0 +1,513 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f0f1a, #1b1030);
+    color: #f5f5f5;
+}
+
+.header{
+    width: 100%;
+    padding: 25px 10%;
+    background: rgba(17, 24, 39, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #7c3aed;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span{
+    color: #a855f7;
+}
+
+.navbar a{
+    color: #f5f5f5;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+    font-size: 15px;
+    position: relative;
+}
+
+.navbar a:hover{
+    color: #c084fc;
+}
+
+.inicio{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 140px 10%;
+    gap: 60px;
+}
+
+.conteudo-inicio{
+    max-width: 600px;
+}
+
+.conteudo-inicio h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.conteudo-inicio h2 span{
+    color: #a855f7;
+}
+
+.conteudo-inicio h3{
+    font-size: 24px;
+    color: #d8b4fe;
+    margin-bottom: 20px;
+}
+
+.conteudo-inicio p{
+    color: #ddd6fe;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.botoes{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+}
+
+.btn2{
+    background-color: transparent;
+    border: 1px solid #c084fc;
+    color: #c084fc;
+}
+
+.btn2:hover{
+    background-color: #a855f7;
+    color: white;
+}
+
+.foto-perfil{
+    width: 250px;
+    height: 250px;
+    border-radius: 300px;
+    overflow: hidden;
+    border: 4px solid #7e22ce;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+.foto-perfil img{
+    width: 430px;
+    height: 380px;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 5000%;
+    border: 3px solid #1e1b4b;
+    margin-top: -70px;
+    margin-left: -25px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo h2{
+    font-size: 40px;
+    color: #c084fc;
+}
+
+.sobre{
+    padding: 100px 10%;
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.sobre-conteudo{
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.sobre-conteudo p{
+    color: #ddd6fe;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.skills{
+    padding: 100px 10%;
+}
+
+.skills-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card{
+    background: rgba(30, 27, 75, 0.7);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #7c3aed;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.skill-card:hover{
+    transform: translateY(-8px);
+    border-color: #c084fc;
+}
+
+.skill-card h3{
+    color: #c084fc;
+    margin-bottom: 15px;
+}
+
+.skill-card p{
+    color: #ddd6fe;
+    line-height: 1.6;
+}
+
+.projetos{
+    padding: 100px 10%;
+    background: rgba(17, 24, 39, 0.85);
+}
+
+.cards-projetos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    background: #1e1b4b;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #7c3aed;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    border-color: #c084fc;
+}
+
+.imagem-projeto{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagem-projeto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 20px 20px 10px;
+    color: #c084fc;
+}
+
+.card p{
+    padding: 0 20px 20px;
+    color: #ddd6fe;
+    line-height: 1.6;
+}
+
+.links{
+    display: flex;
+    gap: 15px;
+    padding: 0 20px 25px;
+}
+
+.links a{
+    text-decoration: none;
+    color: #c084fc;
+    border: 1px solid #c084fc;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.links a:hover{
+    background-color: #a855f7;
+    color: white;
+}
+
+.contato{
+    padding: 100px 10%;
+}
+
+.contato-conteudo{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contato-conteudo p{
+    margin-bottom: 12px;
+    color: #ddd6fe;
+}
+
+.formulario{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario input,
+.formulario textarea{
+    background: rgba(30, 27, 75, 0.7);
+    border: 1px solid #7c3aed;
+    padding: 16px;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+}
+
+.formulario textarea{
+    height: 150px;
+    resize: none;
+}
+
+.formulario button{
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover{
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+    transform: scale(1.02);
+}
+
+footer{
+    background: rgba(17, 24, 39, 0.9);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #7c3aed;
+}
+
+footer p{
+    color: #d8b4fe;
+    font-size: 14px;
+}
+
+.contato-conteudo a{
+    text-align: center;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-flex;
+    transition: 0.3s;
+}
+
+.contato-conteudo a:hover{
+    transform: translateY(-2px);
+}
+
+.contato-conteudo p{
+    color: #e9d5ff;
+}
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1024px){
+
+    .inicio{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 140px 8% 80px;
+    }
+
+    .conteudo-inicio{
+        max-width: 100%;
+    }
+
+    .botoes{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skills-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-projetos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .foto-perfil{
+        width: 220px;
+        height: 220px;
+    }
+
+    .foto-perfil img{
+        width: 360px;
+        height: 320px;
+        margin-top: -60px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .header{
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a{
+        margin: 10px 15px;
+        font-size: 14px;
+    }
+
+    .inicio{
+        padding: 180px 6% 80px;
+        gap: 40px;
+    }
+
+    .conteudo-inicio h2{
+        font-size: 38px;
+    }
+
+    .conteudo-inicio h3{
+        font-size: 20px;
+    }
+
+    .titulo h2{
+        font-size: 32px;
+    }
+
+    .skills-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .cards-projetos{
+        grid-template-columns: 1fr;
+    }
+
+    .sobre,
+    .skills,
+    .projetos,
+    .contato{
+        padding: 80px 6%;
+    }
+
+    .foto-perfil{
+        width: 200px;
+        height: 200px;
+    }
+
+    .foto-perfil img{
+        width: 320px;
+        height: 280px;
+        margin-top: -50px;
+        margin-left: -10px;
+    }
+
+    .formulario input,
+    .formulario textarea{
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px){
+    .logo{
+        font-size: 24px;
+    }
+    .conteudo-inicio h2{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .conteudo-inicio h3{
+        font-size: 18px;
+    }
+    .conteudo-inicio p{
+        font-size: 14px;
+    }
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+    .botoes{
+        flex-direction: column;
+        width: 100%;
+    }
+    .foto-perfil{
+        width: 170px;
+        height: 170px;
+    }
+    .foto-perfil img{
+        width: 270px;
+        height: 240px;
+        margin-top: -40px;
+        margin-left: -5px;
+    }
+    .titulo h2{
+        font-size: 28px;
+    }
+    .skill-card,
+    .card{
+        padding: 20px;
+    }
+    .links{
+        flex-direction: column;
+    }
+    .links a{
+        text-align: center;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
