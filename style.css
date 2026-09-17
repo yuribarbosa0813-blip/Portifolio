@@ -125,12 +125,11 @@ body{
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
-    margin: 0 auto;
 }
 
 .foto-perfil img{
     width: 430px;
-    height: 380px;
+    height: 3880px;
     object-fit: contain;
     object-position: center top;
     border-radius: 5000%;
