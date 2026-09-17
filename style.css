@@ -125,6 +125,7 @@ body{
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    margin: 0 auto;
 }
 
 .foto-perfil img{
