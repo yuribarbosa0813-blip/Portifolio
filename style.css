@@ -129,7 +129,7 @@ body{
 
 .foto-perfil img{
     width: 430px;
-    height: 3880px;
+    height: 300px;
     object-fit: contain;
     object-position: center top;
     border-radius: 5000%;
