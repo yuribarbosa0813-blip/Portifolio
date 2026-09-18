@@ -8,6 +8,7 @@
 body{
     background: linear-gradient(135deg, #0f0f1a, #1b1030);
     color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 .header{
@@ -20,6 +21,8 @@ body{
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
+    z-index: 1000;
     border-bottom: 1px solid #7c3aed;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
@@ -113,10 +116,12 @@ body{
     color: white;
 }
 
+/* FOTO DE PERFIL */
+
 .foto-perfil{
     width: 250px;
     height: 250px;
-    border-radius: 300px;
+    border-radius: 50%;
     overflow: hidden;
     border: 4px solid #7e22ce;
     flex-shrink: 0;
@@ -131,6 +136,7 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
 }
 
 .titulo{
@@ -142,6 +148,8 @@ body{
     font-size: 40px;
     color: #c084fc;
 }
+
+/* SOBRE */
 
 .sobre{
     padding: 100px 10%;
@@ -159,6 +167,8 @@ body{
     line-height: 1.9;
     margin-bottom: 20px;
 }
+
+/* SKILLS */
 
 .skills{
     padding: 100px 10%;
@@ -193,6 +203,8 @@ body{
     color: #ddd6fe;
     line-height: 1.6;
 }
+
+/* PROJETOS */
 
 .projetos{
     padding: 100px 10%;
@@ -263,6 +275,8 @@ body{
     color: white;
 }
 
+/* CONTATO */
+
 .contato{
     padding: 100px 10%;
 }
@@ -274,8 +288,27 @@ body{
 
 .contato-conteudo p{
     margin-bottom: 12px;
-    color: #ddd6fe;
+    color: #e9d5ff;
 }
+
+.contato-conteudo a{
+    text-align: center;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-flex;
+    transition: 0.3s;
+}
+
+.contato-conteudo a:hover{
+    transform: translateY(-2px);
+}
+
+/* FORMULÁRIO */
 
 .formulario{
     max-width: 700px;
@@ -316,6 +349,8 @@ body{
     transform: scale(1.02);
 }
 
+/* RODAPÉ */
+
 footer{
     background: rgba(17, 24, 39, 0.9);
     text-align: center;
@@ -328,27 +363,7 @@ footer p{
     font-size: 14px;
 }
 
-.contato-conteudo a{
-    text-align: center;
-    margin-bottom: 40px;
-    text-decoration: none;
-    color: white;
-    border: none;
-    background: linear-gradient(135deg, #9333ea, #c084fc);
-    border-radius: 10px;
-    padding: 10px 20px;
-    display: inline-flex;
-    transition: 0.3s;
-}
-
-.contato-conteudo a:hover{
-    transform: translateY(-2px);
-}
-
-.contato-conteudo p{
-    color: #e9d5ff;
-}
-/* ================= RESPONSIVIDADE ================= */
+/* RESPONSIVIDADE */
 
 @media (max-width: 1024px){
 
@@ -360,6 +375,7 @@ footer p{
 
     .conteudo-inicio{
         max-width: 100%;
+        width: 100%;
     }
 
     .botoes{
@@ -379,13 +395,6 @@ footer p{
         width: 220px;
         height: 220px;
     }
-
-    .foto-perfil img{
-        width: 360px;
-        height: 320px;
-        margin-top: -60px;
-        margin-left: -15px;
-    }
 }
 
 @media (max-width: 768px){
@@ -394,6 +403,10 @@ footer p{
         padding: 20px 6%;
         flex-direction: column;
         gap: 15px;
+    }
+
+    .logo{
+        text-align: center;
     }
 
     .navbar{
@@ -408,16 +421,38 @@ footer p{
     }
 
     .inicio{
+        width: 100%;
         padding: 180px 6% 80px;
         gap: 40px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .conteudo-inicio{
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .conteudo-inicio h2{
         font-size: 38px;
+        text-align: center;
     }
 
     .conteudo-inicio h3{
         font-size: 20px;
+        text-align: center;
+    }
+
+    .conteudo-inicio p{
+        text-align: center;
+    }
+
+    .botoes{
+        width: 100%;
+        justify-content: center;
     }
 
     .titulo h2{
@@ -442,13 +477,15 @@ footer p{
     .foto-perfil{
         width: 200px;
         height: 200px;
+        margin: 0 auto;
     }
 
     .foto-perfil img{
-        width: 320px;
-        height: 280px;
-        margin-top: -50px;
-        margin-left: -10px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+        object-position: center;
     }
 
     .formulario input,
@@ -458,46 +495,141 @@ footer p{
 }
 
 @media (max-width: 480px){
-    .logo{
-        font-size: 24px;
-    }
-    .conteudo-inicio h2{
-        font-size: 30px;
-        line-height: 1.2;
-    }
-    .conteudo-inicio h3{
-        font-size: 18px;
-    }
-    .conteudo-inicio p{
-        font-size: 14px;
-    }
-    .btn{
+
+    .header{
         width: 100%;
+        padding: 20px;
+    }
+
+    .logo{
+        width: 100%;
+        font-size: 24px;
         text-align: center;
     }
-    .botoes{
-        flex-direction: column;
+
+    .navbar{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
+
+    .navbar a{
+        margin: 10px 9px;
+        font-size: 14px;
+    }
+
+    .inicio{
+        width: 100%;
+        min-height: 100vh;
+        padding: 180px 20px 80px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .conteudo-inicio{
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo-inicio h2{
+        width: 100%;
+        font-size: 30px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .conteudo-inicio h3{
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .conteudo-inicio p{
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    .botoes{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
     .foto-perfil{
         width: 170px;
         height: 170px;
+        margin: 0 auto;
+        align-self: center;
     }
+
+    .foto-perfil img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .titulo{
+        width: 100%;
+        text-align: center;
+    }
+
     .titulo h2{
         font-size: 28px;
+        text-align: center;
     }
+
+    .skills-cards{
+        width: 100%;
+    }
+
     .skill-card,
     .card{
         padding: 20px;
     }
+
     .links{
         flex-direction: column;
     }
+
     .links a{
         text-align: center;
     }
+
+    .contato{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contato-conteudo{
+        width: 100%;
+        text-align: center;
+    }
+
     footer p{
         font-size: 12px;
+        text-align: center;
     }
-}
 }
