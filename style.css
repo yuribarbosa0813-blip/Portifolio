@@ -458,115 +458,46 @@ footer p{
 }
 
 @media (max-width: 480px){
-
-    .header{
-        width: 100%;
-        padding: 20px 5%;
-        text-align: center;
-    }
-
     .logo{
         font-size: 24px;
-        width: 100%;
-        text-align: center;
     }
-
-    .navbar{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .navbar a{
-        margin: 10px 10px;
-        font-size: 14px;
-    }
-
-    .inicio{
-        width: 100%;
-        min-height: 100vh;
-        padding: 180px 20px 80px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .conteudo-inicio{
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
     .conteudo-inicio h2{
         font-size: 30px;
         line-height: 1.2;
-        text-align: center;
     }
-
     .conteudo-inicio h3{
         font-size: 18px;
-        text-align: center;
     }
-
     .conteudo-inicio p{
         font-size: 14px;
-        line-height: 1.8;
-        text-align: center;
     }
-
-    .botoes{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
     .btn{
         width: 100%;
         text-align: center;
     }
-
+    .botoes{
+        flex-direction: column;
+        width: 100%;
+    }
     .foto-perfil{
         width: 170px;
         height: 170px;
-        margin: 0 auto;
     }
-
-    .foto-perfil img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
     .titulo h2{
         font-size: 28px;
-        text-align: center;
     }
-
     .skill-card,
     .card{
         padding: 20px;
     }
-
     .links{
         flex-direction: column;
     }
-
     .links a{
         text-align: center;
     }
-
     footer p{
         font-size: 12px;
-        text-align: center;
     }
 }
 }
